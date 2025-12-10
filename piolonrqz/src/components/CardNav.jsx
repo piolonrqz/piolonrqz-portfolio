@@ -2,49 +2,21 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
 
-const Navigation = ({
-  scrollToSection,
+const CardNav = ({
+  items,
   className = '',
   ease = 'power3.out',
   baseColor = '#16161a',
-  menuColor = '#7f5af0',
+  menuColor = '##72757e',
   buttonBgColor = '#7f5af0',
-  buttonTextColor = '#fff'
+  buttonTextColor = '#fff',
+  onNavigate
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const navRef = useRef(null);
   const cardsRef = useRef([]);
   const tlRef = useRef(null);
-
-  const navItems = [
-    {
-      label: "About",
-      bgColor: "#72757e",
-      textColor: "#fff",
-      links: [
-        { label: "About", id: "about", ariaLabel: "Go to About section" },
-        { label: "Skills", id: "skills", ariaLabel: "Go to Skills section" }
-      ]
-    },
-    {
-      label: "Projects",
-      bgColor: "#7f5af0",
-      textColor: "#fff",
-      links: [
-        { label: "Projects", id: "projects", ariaLabel: "Go to Projects section" }
-      ]
-    },
-    {
-      label: "Experience",
-      bgColor: "#e45858",
-      textColor: "#fff",
-      links: [
-        { label: "Experience", id: "experience", ariaLabel: "Go to Experience section" },
-        { label: "Contact", id: "contact", ariaLabel: "Go to Contact section" }
-      ]
-    }
-  ];
 
   const calculateHeight = () => {
     const navEl = navRef.current;
@@ -110,7 +82,7 @@ const Navigation = ({
       tlRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ease, navItems]);
+  }, [ease, items]);
 
   useLayoutEffect(() => {
     const handleResize = () => {
@@ -159,8 +131,8 @@ const Navigation = ({
   };
 
   const handleNavClick = (sectionId) => {
-    if (scrollToSection) {
-      scrollToSection(sectionId);
+    if (onNavigate) {
+      onNavigate(sectionId);
     }
     toggleMenu();
   };
@@ -217,7 +189,7 @@ const Navigation = ({
           } md:flex-row md:items-end md:gap-[12px]`}
           aria-hidden={!isExpanded}
         >
-          {(navItems || []).slice(0, 3).map((item, idx) => (
+          {(items || []).slice(0, 3).map((item, idx) => (
             <div
               key={`${item.label}-${idx}`}
               className="nav-card select-none relative flex flex-col gap-2 p-[12px_16px] rounded-[calc(0.75rem-0.2rem)] min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]"
@@ -248,4 +220,4 @@ const Navigation = ({
   );
 };
 
-export default Navigation;
+export default CardNav;
