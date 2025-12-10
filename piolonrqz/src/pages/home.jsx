@@ -43,7 +43,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="bg-[#16161a] text-[#94a1b2] min-h-screen">
+    <div className="bg-[#16161a] text-[#94a1b2] min-h-screen overflow-x-hidden">
       <CardNav items={navItems} onNavigate={scrollToSection} />
       <Hero scrollToSection={scrollToSection} />
       <About />

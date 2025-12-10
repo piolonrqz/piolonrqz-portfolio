@@ -13,3 +13,10 @@
   margin-right: 10rem; /* adjust to taste, increase for more space */
 }
 
+/* Responsive spacing for mobile */
+@media (max-width: 640px) {
+  .shuffle-char {
+    margin-right: 2rem;
+  }
+}
+

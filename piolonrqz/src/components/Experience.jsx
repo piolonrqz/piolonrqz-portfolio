@@ -4,7 +4,7 @@ const Experience = () => {
   const experience = [
     {
       role: 'Software Developer Intern',
-      company: 'Odysse Innovations',
+      company: 'Odysse.io',
       companyUrl: 'https://odysse.io',
       period: 'Oct 2024 - Dec 2024',
     }
@@ -13,7 +13,7 @@ const Experience = () => {
   return (
     <section id="experience" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-[#ffffff] mb-12 text-center">Experience</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#ffffff] mb-12 text-center">Experience</h2>
         
         <div className="relative">
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#7f5af0]"></div>

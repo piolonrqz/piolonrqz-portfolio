@@ -44,7 +44,7 @@ const Skills = () => {
     <section id="skills" className="px-4 py-20 sm:px-6 lg:px-8">
       <style>{shake}</style>
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-[#ffffff] mb-8 text-center" style={{ fontFamily: 'Outfit, sans-serif' }}>My Skills</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#ffffff] mb-8 text-center" style={{ fontFamily: 'Outfit, sans-serif' }}>My Skills</h2>
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
           {logoCards.map((logo, idx) => (
             <div

@@ -129,11 +129,11 @@ const Shuffle = ({
           if (!w) return;
 
           const wrap = document.createElement('span');
-          wrap.className = 'inline-block overflow-hidden align-baseline text-left';
+          wrap.className = 'inline-block overflow-hidden text-left align-baseline';
           Object.assign(wrap.style, { width: w + 'px' });
 
           const inner = document.createElement('span');
-          inner.className = 'inline-block whitespace-nowrap will-change-transform origin-left transform-gpu';
+          inner.className = 'inline-block origin-left whitespace-nowrap will-change-transform transform-gpu';
 
           parent.insertBefore(wrap, ch);
           wrap.appendChild(inner);
@@ -322,7 +322,7 @@ const Shuffle = ({
     }
   );
 
-  const baseTw = 'inline-block whitespace-normal break-words will-change-transform uppercase text-[4rem] leading-none';
+  const baseTw = 'inline-block whitespace-normal break-words will-change-transform uppercase text-2xl md:text-4xl lg:text-6xl leading-none';
   const classes = `${baseTw} ${ready ? 'visible' : 'invisible'} ${className}`.trim();
   const Tag = tag || 'p';
   const commonStyle = { textAlign, ...style };
