@@ -4,7 +4,7 @@ import Shuffle from './Shuffle';
 
 const Hero = ({ scrollToSection }) => {
   return (
-    <section className="px-4 pb-32 pt-96 sm:px-6 lg:px-8">
+    <section className="px-4 pt-48 pb-32 sm:px-6 sm:pt-64 md:pt-80 lg:px-8 lg:pt-96">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
 
@@ -26,7 +26,7 @@ const Hero = ({ scrollToSection }) => {
               />
             </h1>
 
-            <h1 className="press-start-2p-regular" style={{ letterSpacing: '1.5em' }}>
+            <h1 className="press-start-2p-regular" style={{ letterSpacing: '0.5em' }}>
               <Shuffle
                 text="FRANCES"
                 shuffleDirection="right"
@@ -42,7 +42,7 @@ const Hero = ({ scrollToSection }) => {
               />
             </h1>
 
-            <h1 className="press-start-2p-regular" style={{ letterSpacing: '2em' }}>
+            <h1 className="press-start-2p-regular" style={{ letterSpacing: '1em' }}>
               <Shuffle
                 text="ENRIQUEZ"
                 shuffleDirection="right"
@@ -85,7 +85,7 @@ const Hero = ({ scrollToSection }) => {
             <a
               href="https://drive.google.com/uc?export=download&id=1m1e5s04xkVss8JQd8vP8lpzCUdRi3T6f"
               download
-              className="inline-block bg-[#7f5af0] text-[#ffffff] px-8 mt-12 py-3 rounded-lg hover:bg-[#6b48d6] mb-16 transition-colors font-medium"
+              className="inline-block bg-[#7f5af0] text-[#ffffff] px-6 sm:px-8 mt-12 py-3 rounded-lg hover:bg-[#6b48d6] mb-16 transition-colors font-medium"
             >
               Download Resume
             </a>

@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="max-w-3xl mx-auto">
 
         {/* Header */}
-        <h2 className="mb-8 text-4xl font-bold text-center text-white">
+        <h2 className="mb-8 text-3xl font-bold text-center text-white sm:text-4xl">
           Let's Connect
         </h2>
 
@@ -70,7 +70,7 @@ const Contact = () => {
 
           {/* Submit Button */}
           <div className="pt-4 text-center">
-            <button className="px-10 py-3 bg-black text-[#a263f4] border border-[#a263f4] rounded-lg hover:bg-[#a263f4]/10 transition-colors">
+            <button className="px-6 sm:px-8 lg:px-10 py-3 bg-black text-[#a263f4] border border-[#a263f4] rounded-lg hover:bg-[#a263f4]/10 transition-colors">
               Submit
             </button>
           </div>
