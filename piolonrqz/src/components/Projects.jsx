@@ -7,7 +7,7 @@ const Projects = () => {
       title: 'ALLY',
       description: 'A comprehensive platform built as a capstone project. Led frontend team in architecting responsive components and managing development workflow.',
       tech: ['React', 'Tailwind CSS', 'JavaScript'],
-      github: 'https://ally-capstone-4ww6.vercel.app/',
+      github: 'https://ally-cit.vercel.app',
       role: {src: '/ally.jpg', alt: 'React'}
     },
     {
